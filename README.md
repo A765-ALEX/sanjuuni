@@ -1,4 +1,4 @@
-#**NOTE**
+# **NOTE**
 i changed a few lines so it compiled for me, clone this repo if it won't compile and try it if ur on linux mint or a similar distro
 # sanjuuni
 Converts images and videos into a format that can be displayed in ComputerCraft. Spiritual successor to [juroku](https://github.com/tmpim/juroku), which is hard to build and isn't as flexible.
