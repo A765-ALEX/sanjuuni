@@ -1233,11 +1233,12 @@ int main(int argc, const char * argv[]) {
                 AVFrame * newframe = av_frame_alloc();
                 newframe->ch_layout = AV_CHANNEL_LAYOUT_MONO;
                 if (!resample_ctx) {
-                    if ((error = swr_alloc_set_opts2(&resample_ctx, &newframe->ch_layout, AV_SAMPLE_FMT_U8, 48000, &frame->ch_layout, (AVSampleFormat)frame->format, frame->sample_rate, 0, NULL)) < 0) {
+                    /*if ((error = swr_alloc_set_opts2(&resample_ctx, &newframe->ch_layout, AV_SAMPLE_FMT_U8, 48000, &frame->ch_layout, (AVSampleFormat)frame->format, frame->sample_rate, 0, NULL)) < 0) {
                         std::cerr << "Failed to initialize resampler: " << avErrorString(error) << "\n";
                         av_frame_free(&newframe);
                         continue;
-                    }
+                    }*/
+                    // ^^^ if it works, don't touch it ^^^
                 }
                 newframe->format = AV_SAMPLE_FMT_U8;
                 newframe->sample_rate = 48000;
